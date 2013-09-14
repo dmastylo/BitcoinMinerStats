@@ -17,7 +17,7 @@ class Stat < ActiveRecord::Base
     time = -5
     Stat.all.collect do |stat|
       time = time + 5
-      [time, stat.current_hash_rate] 
+      [time.to_s, stat.current_hash_rate] 
     end
   end
 
