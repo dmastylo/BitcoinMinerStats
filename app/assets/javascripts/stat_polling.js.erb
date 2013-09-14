@@ -1,0 +1,16 @@
+$(function()
+{
+  // Stat index page specific
+  if ($('.current-hash-rate').length > 0)
+  {
+    // Poll for new stats
+    timer = setTimeout(updateStats, 5000);
+  }
+});
+
+function updateStats(pollingFrequency)
+{
+  $.getScript("/stats.js?update_stats=" + 1);
+
+  timer = setTimeout(updateStats, 5000);
+}

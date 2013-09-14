@@ -4,7 +4,12 @@ require 'json'
 class StatsController < ApplicationController
 
   def index
-    @stats = Stat.all
+    if params[:update_stats]
+      # Polling for new stats
+      @new_stat = Stat.last
+    else
+      @stats = Stat.all
+    end
   end
 
   def create
