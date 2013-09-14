@@ -15,13 +15,13 @@ class Stat < ActiveRecord::Base
 
   def self.hash_rate_stats
     Stat.all.collect do |stat|
-      stat.current_hash_rate
+      stat.current_hash_rate unless stat.current_hash_rate.blank?
     end
   end
 
   def self.bitcoin_price_stats
     Stat.all.collect do |stat|
-      stat.current_bitcoin_price
+      stat.current_bitcoin_price unless stat.current_hash_rate.blank?
     end
   end
 

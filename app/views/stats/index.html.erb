@@ -10,10 +10,10 @@
   <% end %>
 
   <div class="hash-rate-graph">
-    <%= image_tag(Gchart.line(:size => '300x300', :title => "Hash Rate", :bg => 'efefef', :legend => ['Average MH/s'], :data => Stat.hash_rate_stats, :axis_with_labels => ['x']), :axis_labels => ['0s','5s','10s','15s','20s']) %>
+    <%= image_tag(Gchart.line(:size => '300x300', :title => "Hash Rate", :bg => 'efefef', :legend => ['Average MH/s'], :data => Stat.hash_rate_stats, :axis_with_labels => ['y']), :axis_labels => ['0s','5s','10s','15s','20s']) %>
   </div>
 
   <div class="bitcoin-price-graph">
-    <%= image_tag(Gchart.line(:size => '300x300', :title => "Bitcoin Price", :bg => 'efefef', :legend => ['USD/BTC'], :data => Stat.bitcoin_price_stats, :axis_with_labels => ['x']), :axis_labels => ['0s','5s','10s','15s','20s']) %>
+    <%= image_tag(Gchart.line(:size => '300x300', :title => "Bitcoin Price", :bg => 'efefef', :legend => ['USD/BTC'], :data => Stat.bitcoin_price_stats, :axis_with_labels => ['y']), :axis_labels => ['0s','5s','10s','15s','20s']) %>
   </div>
 </div>

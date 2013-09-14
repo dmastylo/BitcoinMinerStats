@@ -48,5 +48,5 @@ else if (current_bitcoin_price < old_bitcoin_price_value)
   }, 2000);
 }
 
-$('.hash-rate-graph').html(<%= image_tag(Gchart.line(:size => '300x300', :title => "Hash Rate", :bg => 'efefef', :legend => ['Average MH/s'], :data => @hash_rate_stats, :axis_with_labels => ['x']), :axis_labels => ['0s','5s','10s','15s','20s']) %>)
-$('.bitcoin-price-graph').html(<%= image_tag(Gchart.line(:size => '300x300', :title => "Bitcoin Price", :bg => 'efefef', :legend => ['USD/BTC'], :data => @bitcoin_price_stats, :axis_with_labels => ['x']), :axis_labels => ['0s','5s','10s','15s','20s']) %>)
+$('.hash-rate-graph').html(<%= image_tag(Gchart.line(:size => '300x300', :title => "Hash Rate", :bg => 'efefef', :legend => ['Average MH/s'], :data => @hash_rate_stats, :axis_with_labels => ['y']), :axis_labels => ['0s','5s','10s','15s','20s']) %>)
+$('.bitcoin-price-graph').html(<%= image_tag(Gchart.line(:size => '300x300', :title => "Bitcoin Price", :bg => 'efefef', :legend => ['USD/BTC'], :data => @bitcoin_price_stats, :axis_with_labels => ['y']), :axis_labels => ['0s','5s','10s','15s','20s']) %>)
