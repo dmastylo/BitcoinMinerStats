@@ -8,32 +8,6 @@
     <%= render 'layouts/shim' %>
 
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,800' rel='stylesheet' type='text/css'>
-
-    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-      <script type="text/javascript">
-        google.load("visualization", "1", {packages:["corechart"]});
-        google.setOnLoadCallback(drawChart([
-          ['Time', 'Hash Rate']
-        ]));
-    
-        function drawChart(input_data) {
-          var data = google.visualization.arrayToDataTable(input_data);
-          // var data = google.visualization.arrayToDataTable([
-          //   ['Time', 'Hash Rate'],
-          //   ['1s', 1],
-          //   ['2s', 2],
-          //   ['3s', 3],
-          //   ['4s', 4]
-          // ]);
-
-          var options = {
-            title: 'Average Hash Rate'
-          };
-
-          var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
-          chart.draw(data, options);
-        }
-    </script>
   </head>
   <body>
     <%= render 'layouts/nav_bar' %>
