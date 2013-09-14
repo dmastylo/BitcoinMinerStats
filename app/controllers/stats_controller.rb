@@ -5,7 +5,7 @@ class StatsController < ApplicationController
   end
 
   def create
-    current_hash_rate = params[:stat]
+    current_hash_rate = params[:avg]
     Stat.create(current_hash_rate: current_hash_rate)
 
     # TODO: Add bitcoin price checking
