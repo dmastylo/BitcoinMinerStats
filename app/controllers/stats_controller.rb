@@ -1,7 +1,7 @@
 class StatsController < ApplicationController
 
   def index
-    @stats = Stats.all
+    @stats = Stat.all
   end
 
   def create
