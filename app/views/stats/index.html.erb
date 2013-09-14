@@ -9,7 +9,7 @@
     </div>
   <% end %>
 
-  <%= image_tag(Gchart.line(:size => '300x300', :title => "Hash Rate", :bg => 'efefef', :legend => ['Average MH/s'], :data => Stat.hash_rate_stats, :axis_with_labels => ['x','y']), :axis_labels => [['0s','5s','10s','15s','20s'], ['190','195','200', '205']]) %>
+  <%= image_tag(Gchart.line(:size => '300x300', :title => "Hash Rate", :bg => 'efefef', :legend => ['Average MH/s'], :data => Stat.hash_rate_stats, :axis_with_labels => ['x','y']), :axis_labels => [['190','195','200', '205'], ['0s','5s','10s','15s','20s']]) %>
 
-  <%= image_tag(Gchart.line(:size => '300x300', :title => "Bitcoin Price", :bg => 'efefef', :legend => ['USD/BTC'], :data => Stat.bitcoin_price_stats, :axis_with_labels => ['x','y']), :axis_labels => [['0s','5s','10s','15s','20s'], ['190','195','200', '205']]) %>
+  <%= image_tag(Gchart.line(:size => '300x300', :title => "Bitcoin Price", :bg => 'efefef', :legend => ['USD/BTC'], :data => Stat.bitcoin_price_stats, :axis_with_labels => ['x','y']), :axis_labels => [['190','195','200', '205'], ['0s','5s','10s','15s','20s']]) %>
 </div>
