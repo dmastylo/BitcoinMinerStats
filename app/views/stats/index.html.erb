@@ -12,5 +12,5 @@
   <button> Submit </button>
   <button> Cancel </button>
 
-  <%= image_tag(Gchart.line(:size => '200x300', :title => "example title", :bg => 'efefef', :legend => ['first data set label', 'second data set label'], :data => [10, 30, 120, 45, 72])) %>
+  <%= image_tag(Gchart.line(:size => '500x500', :title => "Average Hash Rate", :bg => 'efefef', :legend => ['Average MH/s'], :data => Stat.hash_rate_stats)) %>
 </div>
