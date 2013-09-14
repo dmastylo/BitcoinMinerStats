@@ -1,3 +1,5 @@
 <div class="center hero-unit">
-  Current Hash Rate = <%= Stat.last.current_hash_rate %>
+  <% unless Stat.last.blank? %>
+    Current Hash Rate = <%= Stat.last.current_hash_rate %>
+  <% end %>
 </div>
