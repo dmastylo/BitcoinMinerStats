@@ -1,7 +1,22 @@
-<header class="navbar navbar-fixed-top">
+<div class="navbar navbar-inverse navbar-fixed-top">
   <div class="navbar-inner">
     <div class="container">
-      <%= link_to "Bitcoin Miner", root_path, id: "logo" %>
+      <button data-target=".nav-collapse" data-toggle="collapse" class="btn btn-navbar" type="button">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div class="nav-collapse collapse">
+        <ul class="nav">
+          <li class="active">
+            <%= link_to "Bitcoin Miner", root_path, id: "logo" %>
+          </li>
+          <li class="">
+            <%= link_to "Stats", stats_path %>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
-</header>
+</div>
