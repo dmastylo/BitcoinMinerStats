@@ -9,7 +9,7 @@
     </div>
   <% end %>
 
-  <%= Gchart.line(:size => '300x300', :title => "Hash Rate", :bg => 'efefef', :legend => ['Average MH/s'], :data => Stat.hash_rate_stats, :axis_with_labels => ['x','y'], :format => 'image_tag') %>
+  <%= image_tag(Gchart.line(:size => '300x300', :title => "Hash Rate", :bg => 'efefef', :legend => ['Average MH/s'], :data => Stat.hash_rate_stats, :axis_with_labels => ['x','y'])) %>
 
-  <%= Gchart.line(:size => '300x300', :title => "Bitcoin Price", :bg => 'efefef', :legend => ['USD/BTC'], :data => Stat.bitcoin_price_stats, :axis_with_labels => ['x','y'], :format => 'image_tag') %>
+  <%= image_tag(Gchart.line(:size => '300x300', :title => "Bitcoin Price", :bg => 'efefef', :legend => ['USD/BTC'], :data => Stat.bitcoin_price_stats, :axis_with_labels => ['x','y'])) %>
 </div>
