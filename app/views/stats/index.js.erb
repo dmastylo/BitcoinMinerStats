@@ -1,11 +1,11 @@
 $current_hash_rate = $('#current-hash-rate-value');
 $current_bitcoin_price = $('#current-bitcoin-price-value');
 
-var old_hash_rate = parseInt($current_hash_rate.html());
-var old_bitcoin_price_value = parseInt($current_bitcoin_price.html());
+var old_hash_rate = parseFloat($current_hash_rate.html());
+var old_bitcoin_price_value = parseFloat($current_bitcoin_price.html());
 
-var current_hash_rate = <%= @new_stat.current_hash_rate %>;
-var current_bitcoin_price = <%= @new_stat.current_bitcoin_price %>;
+var current_hash_rate = parseFloat(<%= @new_stat.current_hash_rate.to_f %>);
+var current_bitcoin_price = parseFloat(<%= @new_stat.current_bitcoin_price.to_f %>);
 
 $current_hash_rate.html(current_hash_rate);
 $current_bitcoin_price.html(current_bitcoin_price);
