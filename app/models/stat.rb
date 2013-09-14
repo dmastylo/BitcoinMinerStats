@@ -15,7 +15,7 @@ class Stat < ActiveRecord::Base
 
   def self.hash_rate_stats
     Stat.all.collect do |stat|
-      [stat.current_hash_rate] 
+      stat.current_hash_rate
     end
   end
 
