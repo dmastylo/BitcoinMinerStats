@@ -1,11 +1,11 @@
 <div class="center hero-unit">
   <% unless Stat.last.blank? %>
     <div class = "current-hash-rate">
-      Current Hash Rate = <%= Stat.last.current_hash_rate %>
+      Current Hash Rate = <span id="current-hash-rate-value"><%= Stat.last.current_hash_rate %></span>
     </div>
 
     <div class = "current-bitcoin-price">
-      Current Bitcoin Price = <%= Stat.last.current_bitcoin_price %>
+      Current Bitcoin Price = <span id="current-bitcoin-price-value"><%= Stat.last.current_bitcoin_price %></span>
     </div>
   <% end %>
 </div>

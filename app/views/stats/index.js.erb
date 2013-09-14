@@ -1,0 +1,49 @@
+$current_hash_rate = $('#current-hash-rate-value');
+$current_bitcoin_price = $('#current-bitcoin-price-value');
+
+var old_hash_rate = parseInt($current_hash_rate.html());
+var old_bitcoin_price_value = parseInt($current_bitcoin_price.html());
+
+var current_hash_rate = <%= @new_stat.current_hash_rate %>;
+var current_bitcoin_price = <%= @new_stat.current_bitcoin_price %>;
+
+$current_hash_rate.html(current_hash_rate);
+$current_bitcoin_price.html(current_bitcoin_price);
+
+if (current_hash_rate > old_hash_rate)
+{
+  // flash green
+  $current_hash_rate.css('color', 'green');
+  setTimeout(function()
+  {
+    $current_hash_rate.css('color', 'black');
+  }, 2000);
+}
+else if (current_hash_rate < old_hash_rate)
+{
+  // flash red
+  $current_hash_rate.css('color', 'red');
+  setTimeout(function()
+  {
+    $current_hash_rate.css('color', 'black');
+  }, 2000);
+}
+
+if (current_bitcoin_price > old_bitcoin_price_value)
+{
+  // flash green
+  $current_bitcoin_price.css('color', 'green');
+  setTimeout(function()
+  {
+    $current_bitcoin_price.css('color', 'black');
+  }, 2000);
+}
+else if (current_bitcoin_price < old_bitcoin_price_value)
+{
+  // flash red
+  $current_bitcoin_price.css('color', 'red');
+  setTimeout(function()
+  {
+    $current_bitcoin_price.css('color', 'black');
+  }, 2000);
+}
