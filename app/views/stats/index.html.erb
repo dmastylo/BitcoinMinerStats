@@ -12,5 +12,7 @@
   <button> Submit </button>
   <button> Cancel </button>
 
-  <%= image_tag(Gchart.line(:size => '500x500', :title => "Average Hash Rate", :bg => 'efefef', :legend => ['Average MH/s'], :data => Stat.hash_rate_stats)) %>
+  <%= image_tag(Gchart.line(:size => '300x300', :title => "Hash Rate", :bg => 'efefef', :legend => ['Average MH/s'], :data => Stat.hash_rate_stats)) %>
+
+  <%= image_tag(Gchart.line(:size => '300x300', :title => "Bitcoin Price", :bg => 'efefef', :legend => ['USD/BTC'], :data => Stat.bitcoin_price_stats)) %>
 </div>

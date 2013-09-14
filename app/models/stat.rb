@@ -19,4 +19,10 @@ class Stat < ActiveRecord::Base
     end
   end
 
+  def self.bitcoin_price_stats
+    Stat.all.collect do |stat|
+      stat.current_bitcoin_price
+    end
+  end
+
 end
