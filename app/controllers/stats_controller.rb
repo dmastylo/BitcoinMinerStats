@@ -7,6 +7,7 @@ class StatsController < ApplicationController
     if params[:update_stats]
       # Polling for new stats
       @new_stat = Stat.last
+      @graph_stats = Stat.hash_rate_stats
     else
       @stats = Stat.all
     end

@@ -14,17 +14,18 @@
         google.load("visualization", "1", {packages:["corechart"]});
         google.setOnLoadCallback(drawChart);
     
-        function drawChart() {
-          var data = google.visualization.arrayToDataTable([
-              ['Money', 'Earned'],
-              ['1s',  1],
-              ['3s',  3],
-              ['5s',  1],
-              ['6s',  7]
-          ]);
+        function drawChart(input_data) {
+          var data = google.visualization.arrayToDataTable(input_data);
+          // var data = google.visualization.arrayToDataTable([
+          //   ['Time', 'Hash Rate'],
+          //   ['1s', 1],
+          //   ['2s', 2],
+          //   ['3s', 3],
+          //   ['4s', 4]
+          // ]);
 
           var options = {
-              title: 'Revenue Earned'
+            title: 'Average Hash Rate'
           };
 
           var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
